@@ -1,4 +1,3 @@
-import digit_classifier
 import os
 os.environ["KCFG_KIVY_LOG_LEVEL"] = "warning"
 
@@ -14,6 +13,8 @@ from kivy.uix.stencilview import StencilView
 from kivy.graphics import Line, Ellipse
 from kivy.properties import ObjectProperty
 from kivy.core.window import Window
+
+import digit_classifier
 
 Window.size = (480, 640)
 
