@@ -92,13 +92,11 @@ def center_digit(img):
     cols_padding = (int(math.ceil((28 - cols) / 2.0)), int(math.floor((28 - cols) / 2.0)))
     rows_padding = (int(math.ceil((28 - rows) / 2.0)), int(math.floor((28 - rows) / 2.0)))
     img = np.lib.pad(img, (rows_padding, cols_padding), "constant")
-    plot_digit(img)
 
     # Center the image using its center of mass
     shiftx, shifty = get_best_shift(img)
     shifted = shift(img, shiftx, shifty)
     img = shifted
-    plot_digit(img)
 
     return img
 
